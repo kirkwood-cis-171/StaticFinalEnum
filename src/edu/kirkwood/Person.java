@@ -3,9 +3,18 @@ package edu.kirkwood;
 public class Person {
 
     public enum PersonType {
-        ADMIN,
-        TEACHER,
-        STUDENT,
+        ADMIN(1, "Admin"),
+        TEACHER(2, "Teacher"),
+        STUDENT(3, "Student"),;
+
+
+        private int value;
+        private String description;
+
+        PersonType(int value, String description) {
+            this.value = value;
+            this.description = description;
+        }
     }
 
     public static final int ADMIN = 0;
